@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
  */
 
 import "@/app/_styles/globals.css";
-import Header from "./_components/Header/header.component";
+import Header from "./_components/header.component";
 
 export const metadata = {
     title: {

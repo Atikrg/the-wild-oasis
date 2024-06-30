@@ -12,20 +12,9 @@ export default function RootLayout({ children }) {
 }
  */
 
-import Logo from "./_components/logo";
-import Navigation from "./_components/navigation";
 import "@/app/_styles/globals.css";
-import { Josefin_Sans } from "next/font/google";
+import Header from "./_components/Header/header.component";
 
-
-const josefin = Josefin_Sans(
-  {
-    subsets: ["latin"],
-    display: "swap",
-  }
-);
-
-console.log(josefin);
 export const metadata = {
     title: {
         template: "%s / The Wild Oasis",
@@ -38,15 +27,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-           <body className={`{josefin.className}
-            bg-black text-gray-100 min-h-screen
-            `}>
-                <header>
-                    <Logo />
-                </header>
-                <Navigation />
-                <main>{children}</main>
-                <footer>Copyright by the Wild Oasis</footer>
+            <body
+                className={`
+            bg-black text-gray-100 min-h-screen flex flex-col
+            `}
+            >
+                <Header />
+                <div className="flex-1 px-8 py-12 ">
+                <main className="mx-auto max-w-7xl">{children}</main>
+                </div>
+    
             </body>
         </html>
     );

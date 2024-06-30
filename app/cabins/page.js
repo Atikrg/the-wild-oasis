@@ -15,12 +15,12 @@ export default async function Page() {
     return (
         <>
             <h1>Cabins Page</h1>
-            <ul>
+           {/*  <ul>
                 {data.map((user) => (
                     <li key={user.id}>{user.name}</li>
                 ))}
             </ul>
-            <Counter users={data} />
+            <Counter users={data} /> */}
         </>
     );
 }

@@ -12,8 +12,8 @@ export default function RootLayout({ children }) {
 }
  */
 
-import Logo from "./components/logo";
-import Navigation from "./components/navigation";
+import Logo from "./_components/logo";
+import Navigation from "./_components/navigation";
 
 export const metadata = {
   title: "The Wild Oasis",

@@ -14,18 +14,16 @@ export default function RootLayout({ children }) {
 
 import Logo from "./_components/logo";
 import Navigation from "./_components/navigation";
+import "@/app/_styles/globals.css";
 
 export const metadata = {
   title: "The Wild Oasis",
 
 }
-
-
-
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <body>
+            <body class = "text-gray-50 bg-black min-h-screen">
               <header>
               <Logo/>
               </header>

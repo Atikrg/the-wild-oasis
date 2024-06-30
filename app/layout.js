@@ -17,16 +17,21 @@ import Navigation from "./_components/navigation";
 import "@/app/_styles/globals.css";
 
 export const metadata = {
-  title: "The Wild Oasis",
+    title: {
+        template: "%s / The Wild Oasis",
+        default: "Welcome / The Wild Oasis",
+    },
+    description:
+        "Luxurious cabin hotel, located in the heart of the Italian Dolomites, surrounded by beautiful mountails and dark forests",
+};
 
-}
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <body class = "text-gray-50 bg-black min-h-screen">
-              <header>
-              <Logo/>
-              </header>
+            <body class="text-gray-50 bg-black min-h-screen">
+                <header>
+                    <Logo />
+                </header>
                 <Navigation />
                 <main>{children}</main>
                 <footer>Copyright by the Wild Oasis</footer>
